@@ -11,17 +11,18 @@
   <remote  name="mi-thorium"
            fetch="https://github.com/Mi-Thorium"
            revision="a13/master" />
-
-	<remote name="alts-mi8953" 
+  
+  <remote name="alts-mi8953" 
           fetch="https://github.com/MI8953-Project"
           revision="a13/master" />
+
 
  <!-- Dependencies -->
 
  <!-- Replacements -->
 
  <!-- Common -->
-  <project path="device/xiaomi/mithorium-common" name="android_device_xiaomi_mithorium-common"     groups="device" remote="mi-thorium"/>
+  <project path="device/xiaomi/mithorium-common" name="android_device_xiaomi_mithorium-common"     groups="device" remote="alts-mi8953"/>
   <project path="vendor/xiaomi/mithorium-common-graphics" name="proprietary_vendor_xiaomi_mithorium-common-graphics" groups="device" remote="mi-thorium" revision="a11/master"/>
 
  <!-- Common - Kernel 4.19 -->
@@ -59,22 +60,11 @@
   <project path="hardware/mithorium/media/lineage-20.0-caf-msm8953/hal" name="LineageOS/android_hardware_qcom_media" groups="qcom,pdk-qcom" revision="lineage-20.0-caf-msm8953" />
   <project path="hardware/mithorium/display/lineage-20.0-caf-msm8953/hal" name="LineageOS/android_hardware_qcom_display" groups="pdk-qcom,qcom,qcom_display" revision="lineage-20.0-caf-msm8953" />
 
- <!-- oxygen -->
-  <project path="kernel/xiaomi/oxygen" name="kernel_msm-4.9"                                   remote="mi-thorium" revision="oxygen/a13/master"/>
-  <project path="device/xiaomi/oxygen" name="android_device_xiaomi_oxygen"     groups="device" remote="mi-thorium"/>
-  <project path="vendor/xiaomi/oxygen" name="proprietary_vendor_xiaomi_oxygen" groups="device" remote="mi-thorium" revision="a11/master"/>
-
- <!-- vince -->
-  <project path="kernel/xiaomi/vince" name="kernel_msm-4.9"                                  remote="mi-thorium" revision="vince/a13/master"/>
-  <project path="device/xiaomi/vince" name="android_device_xiaomi_vince"     groups="device" remote="mi-thorium"/>
-  <project path="vendor/xiaomi/vince" name="proprietary_vendor_xiaomi_vince" groups="device" remote="mi-thorium" revision="a13/master"/>
-
  <!-- ysl -->
-  <project path="kernel/xiaomi/ysl" name="kernel_xiaomi_ysl"                                  remote="alts-mi8953" revision="alts/a14/master"/>
-  <project path="device/xiaomi/ysl" name="android_device_xiaomi_ysl"     groups="device" remote="alts-mi8953"/>
-  <project path="vendor/xiaomi/ysl" name="proprietary_vendor_xiaomi_ysl" groups="device" remote="alts-mi8953" revision="a13/master"/>
+  <project path="device/xiaomi/ysl"  name="android_device_xiaomi_ysl"     groups="device" remote="alts-mi8953" revision="main"/>
+  <project path="vendor/xiaomi/ysl"  name="vendor_xiaomi_ysl-4.19" groups="device" remote="alts-mi8953" revision="main"/>
 
-<!-- ysl-k4.19 -->
-  <project path="kernel/xiaomi/msm8953-4.19" name="android_kernel_xiaomi_ysl"                                  remote="alts-mi8953" revision="dts/audio"/>
-
+ <!-- Kernel -->
+  <project path="kernel/xiaomi/msm8953-4.19" name="android_kernel_xiaomi_ysl" groups="kernel" revision="dts/audio" remote="alts-mi8953" />
+  
 </manifest>
