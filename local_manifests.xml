@@ -16,6 +16,10 @@
           fetch="https://github.com/MI8953-Project"
           revision="a13/master" />
 
+  <remote name="Alts-Project" 
+          fetch="https://github.com/Alts-Project"
+          revision="a13/master" />
+
 
  <!-- Dependencies -->
 
@@ -66,5 +70,8 @@
 
  <!-- Kernel -->
   <project path="kernel/xiaomi/msm8953-4.19" name="android_kernel_xiaomi_ysl" groups="kernel" revision="dts/audio" remote="alts-mi8953" />
+
+ <!-- Techpack-MI8953 -->
+  <project path="kernel/xiaomi/msm8953-4.19/techpack/mi8953" name="kernel_techpack_ysl" groups="techpack" revision="new-fts" remote="Alts-Project" />
   
 </manifest>
